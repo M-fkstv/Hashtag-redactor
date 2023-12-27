@@ -4,11 +4,9 @@ import { changeNoteText, deleteNote } from '../../store/slice';
 
 import { NoteProps } from '../../types';
 
-import ClearIcon from '@mui/icons-material/Clear';
-import EditIcon from '@mui/icons-material/Edit';
-import SaveIcon from '@mui/icons-material/Save';
 import { IconButton, TextField, Typography } from '@mui/material';
 import Box from '@mui/system/Box';
+import { Delete, Edit, Save } from '@mui/icons-material';
 
 export const NoteItem: React.FC<NoteProps> = (item) => {
   const [text, setText] = useState<string>(item.text);
@@ -65,7 +63,7 @@ export const NoteItem: React.FC<NoteProps> = (item) => {
             }}
           >
             <IconButton onClick={handleSaveClick}>
-              <SaveIcon fontSize="small" />
+              <Save fontSize="small" />
             </IconButton>
           </Box>
         </Box>
@@ -80,10 +78,10 @@ export const NoteItem: React.FC<NoteProps> = (item) => {
           <Typography>{item.text}</Typography>
           <Box>
             <IconButton onClick={() => setEdit(!edit)}>
-              <EditIcon fontSize="small" />
+              <Edit fontSize="small" />
             </IconButton>
             <IconButton onClick={() => dispatch(deleteNote(item))}>
-              <ClearIcon fontSize="small" color="warning" />
+              <Delete fontSize="small" color="warning" />
             </IconButton>
           </Box>
         </Box>

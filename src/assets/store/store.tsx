@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { noteReducer } from './store/slice';
+import { noteReducer } from './slice';
 
 import { persistStore, persistReducer } from 'redux-persist';
 import { combineReducers } from 'redux';

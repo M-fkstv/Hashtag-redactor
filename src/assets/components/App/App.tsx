@@ -1,16 +1,16 @@
 import { useState } from 'react';
 
-import { useAppDispatch, useAppSelector } from './assets/hooks';
-import { addNote } from './assets/store/slice';
+import { useAppDispatch, useAppSelector } from '../../hooks';
+import { addNote } from '../../store/slice';
 
 import { Stack, Typography } from '@mui/material';
 
-import { Form } from './assets/components/Form/Form';
-import { NoteList } from './assets/components/NoteList/NoteList';
-import { Note } from './assets/types';
+import { Form } from '../Form/Form';
+import { NoteList } from '../NoteList/NoteList';
+import { Note } from '../../types';
 
 import './App.css';
-import { Hashtags } from './assets/components/Hashtag/Hashtag';
+import { Hashtags } from '../Hashtags/Hashtags';
 
 export const App: React.FC = () => {
   const [note, setNote] = useState<Note>({
